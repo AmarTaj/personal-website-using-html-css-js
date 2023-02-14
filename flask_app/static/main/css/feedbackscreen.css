@@ -1,0 +1,18 @@
+/* formatting for feedback title */
+.feedback-title{
+    font-size: 2vw;
+    font-weight: 580;
+    text-align: center;
+    color: black;
+}
+
+/* formatting for feedback body */
+.feedback-body{
+    min-height: 70vh;
+}
+
+/* formatting for feedback text */
+.feed-text{
+    font-size: 1.25vw;
+    justify-items: left;
+}

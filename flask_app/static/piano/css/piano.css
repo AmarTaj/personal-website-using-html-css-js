@@ -1,0 +1,135 @@
+main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    background: burlywood no-repeat;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, burlywood, burlywood, burlywood);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, burlywood, burlywood, burlywood);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.ominous{
+    align-self: center;
+    justify-content: center;
+}
+
+/* Creepy image with animation added */
+.amygdala-img{
+    display: none;
+    animation: fadeIn 2.5s;
+    height: auto;
+    max-width: 80vw;
+    max-height: 50vh;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+/* Piano element */
+.piano{
+    height: 80vh;
+    width: 75vw;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    justify-content: center;
+    max-width: 80vw;
+    max-height: 50vh;
+    background-color: antiquewhite;
+    border: 3px solid black;
+}
+
+/* Great Old One text */
+.great-old{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2rem;
+}
+
+/* Div for all keys */
+.key-wrap{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    max-width: 80vw;
+    max-height: 50vh;
+}
+
+/* Each individual note and key */
+.note{
+    opacity: 0;
+    font-size: smaller;
+}
+.key {
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+
+/* Minor style differences between white and black keys */
+.white{
+    width: 9%;
+    min-width: 60px;
+    height: 70%;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+.black{
+    width: 8%;
+    height: 45%;
+    margin-left: -4%;
+    margin-right: -4%;
+    z-index: 2;
+    background-color: rgb(94, 83, 83);
+}
+.white.active {
+    background-color: #ccc;
+}
+
+.black.active {
+    background-color: #333;
+}
+
+/* Alien image styling */
+#alien{
+    height: auto;
+    max-width: 80vw;
+    max-height: 50vh;
+}
+
+#amygdala {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+
+/* Animation setting for alien image appearance and piano disappearance */
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

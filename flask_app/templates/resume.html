@@ -1,0 +1,95 @@
+{% extends 'shared/layout.html' %}
+{% block extracss %}
+<link rel="stylesheet" href="../static/main/css/resume.css">
+<!-- <script type="text/javascript" src="https://livejs.com/live.js"></script> -->
+{% endblock %}
+
+
+{% block maincontent %}
+<div class = "resume-wrapper">
+  <!-- Looping over institutions -->
+  {% for inst_id, inst in resume_data.items() %}
+
+    <!-- Institution wrapper for styling top row -->
+      <div class="inst-wrapper">
+        <div class="edit1">
+        <h1 id = "inst-title">{{ inst['name']}} </h1>
+        </div> 
+        {% if inst['city'] != 'NULL' %}
+          <p id = "city" >{{ inst['city'] }}, </p>
+          {% endif %}
+
+          {% if inst['state'] != 'NULL' %}
+          <p id="state" > {{" "}}{{" "+inst['state'] }}</p> 
+          {% endif %}
+
+      </div>
+
+
+        
+          <!-- Position information -->
+          {% if inst['positions'] != {} %}
+            {% for pos_id, pos in inst['positions'].items() %}
+
+            <div class = "title-date" >
+              <h2 id = "p-title" >{{ pos['title']}}</h2>
+
+              <!-- start and end dates -->
+                <p  id = "start-date" >{{ pos['start_date'] }} </p>
+                
+                {% if pos['end_date'] != None %}
+                  <p id = "end-date" >- {{ pos['end_date'] }}</p>
+                {% endif %}
+
+                {% if pos['end_date'] == None %}
+                  <p id = "end-date" >- Current</p>
+                {% endif %}
+            </div>
+
+            <p id = "resp" >{{ pos['responsibilities'] }}</p>
+
+            
+
+            <!-- List holding experiences -->
+            {% if pos['experiences'] != {} %}
+              {% for exp_id, exp in pos['experiences'].items() %}
+
+                <ul class = "exp-list">
+                  <li>
+                    {% if exp['hyperlink'] != 'NULL' %}
+                    <a href = "{{exp['hyperlink']}}">{{ exp['name'] }}:</a>
+
+                    {% endif %}
+                    
+                    {% if exp['hyperlink'] == 'NULL' %}<span id = "ex-no-link">{{exp['name']}}:</span>{% endif %} {% if exp['description'] != 'NULL' %}{{exp['description']}}{% endif %}
+                    {% if exp['skills'] != {} %}
+                    <ul id = "skills-list">
+                      <li id = "skill">Skills used: </li>
+                      
+                      {% for s_id, skill in exp['skills'].items() %}
+                        <li id = "skill">{{skill['name']}}{% if not loop.last %},{% endif %}</li>
+                      {% endfor %}
+                    </ul>
+                    {% endif %}
+                  </li>
+                </ul>
+              <!-- endfor experiences -->
+              {% endfor %}
+            {% endif %}
+          <!-- ends for and if: iterate over inst[positions] -->
+          {% endfor %} 
+        {% endif %}
+        
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+    {% endfor %}
+
+    <hr>
+    
+    <!-- buttons for editing and adding new entries to resume -->
+    <div class="buttons">
+    <button id="EditInst" class="EditInst" onclick="toggle_edit_visibility()">Edit Existing Entries</button>
+    <button id="addres" class="newres" onclick="toggle_res_visibility()">Add New Experience</button>  
+    </div>
+{% endblock %}

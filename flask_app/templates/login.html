@@ -1,0 +1,32 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+<link rel="stylesheet" href="../static/main/css/login.css">
+{% endblock %}
+
+{% block extrajs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+
+
+{% block maincontent %}
+<br><br>
+<h1 id = "title">Login</h1>
+<hr>
+<!-- <input type="none" value=" Login as Owner" onclick="checkCredentials()" /> -->
+<form class = "login-form">
+    <!-- input for email, password -->
+    <input class = "email" id = "l-child" title="Email" name="email" type="text" placeholder="Your Email">
+    <input class = "password" id = "l-child" title = "Password" name="password" type="text" placeholder="Your Password">
+    <button id = "l-child" class = "submit-button"  type = "button" value = "submit" onclick="checkCredentials()">
+        Submit
+    </button>
+
+</form>
+<!-- authentication fails -->
+<div class ="fail">Authentication failure: <span class ="count"></span></div>
+
+<script src="{{ url_for('static', filename='main/js/login.js') }}" defer></script>
+{% endblock %}
+
+

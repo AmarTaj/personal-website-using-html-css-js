@@ -1,0 +1,34 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+    <!-- Main contains the body of the website -->
+    <main>
+        <link rel="stylesheet" href="../static/main/css/main.css">
+        <div class="page-title">
+            <h1>Below is a list of projects I worked on in CSE 477:</h1>
+            <h2>Click an image or hyperlink to learn more.</h2>
+            <hr>
+        </div>
+        <!-- main-txt contains the piano image and all relevant text -->
+        <div class="main-txt">
+            <div class="pianowrap">
+                <a href="/piano">
+                    <img src="../static/main/images/piano.jpeg" alt="piano" id="piano">
+                </a>
+            </div>
+            <div class="desc">
+                <h1>JavaScript Piano</h1>
+                <p>
+                    As part of my first homework assignment in CSE 477, I developed an interactive piano build in pure
+                    HTML, CSS and Javascript. This tool (in addition to my webpage) highlight my ability to build
+                    beautiful and mobile friendly front-end applications. <a href="/piano">Click here to see and
+                        play!</a>
+                </p>
+            </div>
+            <div class="fun-fact">
+                <hr>
+                <h2>More coming soon!</h2>
+            </div>
+        </div>
+    </main>
+{% endblock %}

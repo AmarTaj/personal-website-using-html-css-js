@@ -1,0 +1,198 @@
+<!-- FILL ME IN WITH CODE FOR YOUR PAGE LAYOUT -->
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amar's Personal Website</title>
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/main.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='main/images/logo.png') }}">
+  {% block extracss %}{% endblock %}
+  <script src="{{ url_for('static', filename='main/js/main.js') }}" defer></script>
+  {% block extrajs %}{% endblock %}
+</head>
+
+<body>
+    <article>
+    <!-- The header  -->
+    <header>
+      <link rel="stylesheet" href="../static/main/css/header.css">
+      <div class="header-img">
+      </div>
+    </header>
+
+    <!-- The navigation bar -->
+
+    <!-- Nav deals with the navigation bar -->
+    <nav>
+      <link rel="stylesheet" href="../static/main/css/navbar.css">
+      <div id="container">
+          <div class="topnav">
+              <div class="title">
+                {% if user == 'Unknown' %}  
+                <p>CSE 477 - Homework 3</p>
+                {% else %}
+                <p>Logged in as {{user}}</p>
+                {% endif %}
+              </div>
+              <div class="normal-menu"><a href="/home">Home</a></div>
+              <div class="normal-menu"><a href="/projects">Projects</a></div>
+              <div class="normal-menu"><a href="/resume">Resume</a></div>
+              <li><a class = "og-links" href = "/chat">Chat</a></li>
+              {% if user == 'Unknown' %}
+              <li><a class = "og-links" href = "/login">Login</a></li>
+              {% else %}
+              <li><a class = "og-links" href = "/logout">Logout</a></li>
+              {% endif %}
+              <div class="normal-menu"><a href="https://www.linkedin.com/in/amar-taj-0346aa1a0/" target="_blank">
+                      <img src="../static/main/images/social-linkedin.png" alt="linkedin" width="20vw"
+                          height="20vh"></a></div>
+
+              <!-- Dropdown triggered in scenario with small screen size -->
+              <div class="dropdown">
+                  <input type="checkbox" id="check"><label for="check"><img src="../static/main/images/menu-bar.png"
+                          id="icon"></label>
+                  <u1 class="drop">
+                      <li><a href="/home">Home</a></li>
+                      <li><a href="/projects">Projects</a></li>
+                      <li><a href="/resume">Resume</a></li>
+                      <li><a href="https://www.linkedin.com/in/amar-taj-0346aa1a0/" target="_blank">LinkedIn</a></li>
+                  </u1>
+              </div>
+
+          </div>
+      </div>
+  </nav>
+
+    <main>
+      {% block maincontent %}{% endblock %}
+      <!-- Citation: https://codepen.io/draw/pen/GWzWgr -->
+      <div id="feedback-main">
+        <link rel="stylesheet" href="../static/main/css/feedback.css">
+        <div id="feedback-div">
+          <form action="/processfeedback" method="post" class="form" id="feedback-form1" name="form1" enctype="multipart/form-data">
+      
+            <p class="name">
+              <input name="name" type="name" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="Name" id="feedback-name" />
+            </p>
+      
+            <p class="email">
+              <input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="feedback-email" placeholder="Email" required />
+            </p>
+      
+            <p class="text">
+              <textarea name="comment" type="comment" class="validate[required,length[6,300]] feedback-input" id="feedback-comment" required placeholder="Enter comment here"></textarea>
+            </p>
+      
+            <div class="feedback-submit">
+              <input type="submit" value="SEND" id="feedback-button-blue" />
+              <div class="feedback-ease"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      <div id="newres-main">
+        <link rel="stylesheet" href="../static/main/css/resumeChange.css">
+        <div id="feedback-div">
+          <form action="/processresume" method="post" class="form" id="feedback-form2" name="form2" enctype="multipart/form-data">
+      
+            <p class="name">
+              <input name="instname" type="instname" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="Institution" id="feedback-name" />
+            </p>
+      
+            <p class="name">
+              <input name="jobtitle" type="jobtitle" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="Job Title" id="feedback-name" />
+            </p>
+
+            <p class="name">
+              <input name="city" type="city" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="City" id="feedback-name" />
+            </p>
+
+            <p class="name">
+              <input name="state" type="state" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="State" id="feedback-name" />
+            </p>
+
+            <p class="name">
+              <input name="desc" type="desc" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="Description" id="feedback-name" />
+            </p>
+
+            <p class="name">
+              <input name="start" type="start" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="Start Date" id="feedback-name" />
+            </p>
+
+            <p class="name">
+              <input name="end" type="end" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="End Date" id="feedback-name" />
+            </p>
+
+            <p class="name">
+              <input name="resp" type="resp" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="Responsibility" id="feedback-name" />
+            </p>
+
+            <p class="name">
+              <input name="respdesc" type="respdesc" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="Elaborate on Responsibility" id="feedback-name" />
+            </p>
+      
+            <div class="feedback-submit">
+              <input type="submit" value="SUBMIT" id="feedback-button-blue" />
+              <div class="feedback-ease"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+
+      <div id="edit-main">
+        <link rel="stylesheet" href="../static/main/css/resumeChange.css">
+        <div id="feedback-div">
+          <form action="/processresumeedit" method="post" class="form" id="feedback-form3" name="form2" enctype="multipart/form-data">
+            <select name="change" id="change">
+              <option value="institutions name">Institution Name</option>
+              <option value="institutions city">City</option>
+              <option value="institutions state">State</option>
+              <option value="experiences name">Experience Name</option>
+              <option value="experiences description">Experience Description</option>
+              <option value="positions title">Position Title</option>
+              <option value="positions responsibilities">Position Responsibilities</option>
+              <option value="positions start_date">Start Date</option>
+              <option value="positions end_date">End Date</option>
+              <option value="skills name">Skill Name</option>
+            </select>
+            <p class="name">
+              <input name="from" type="from" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="From" id="feedback-name" />
+            </p>
+            <p class="name">
+              <input name="to" type="to" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="To" id="feedback-name" />
+            </p>
+            <div class="feedback-submit">
+              <input type="submit" value="SUBMIT" id="feedback-button-blue" />
+              <div class="feedback-ease"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Button and form visibility toggle mechanism -->
+      <button id="popup" class="feedback-button" onclick="toggle_visibility()">Feedback</button>
+    </main>
+
+    <!-- The footer of the file -->
+    <footer>
+        <link rel="stylesheet" href="../static/main/css/footer.css">
+        <p>© 2022 Amar Taj</p>
+    </footer>
+
+    </article>
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+

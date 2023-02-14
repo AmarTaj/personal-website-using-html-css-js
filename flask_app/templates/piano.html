@@ -1,0 +1,83 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+    <!-- Main contains the piano and the alien image -->
+    <main>
+        <link rel="stylesheet" href="../static/piano/css/piano.css">
+        <script src="../static/piano/js/piano.js" defer></script>
+        <div class="ominous">
+            <p>"Behold piano great and old, it's master slumbers in far off cold, If you wish to see anew, call out to
+                it - we see you."</p>
+            <hr>
+        </div>
+
+        <!-- Alien image -->
+        <div class="amygdala-img">
+            <img src="../static/piano/images/texture.jpeg" id="alien">
+            <div id="amygdala">
+                I have awoken.
+            </div>
+        </div>
+
+        <!-- Piano -->
+        <div class="piano">
+            <div class="great-old"><p>The Great Old One</p></div>
+            <!-- key-wrap contains all keys for piano functionality -->
+            <div class="key-wrap">
+                <div class="key white" id="a">
+                    <p class="note">A</p>
+                </div>
+                <div class="key black" id="w">
+                    <p class="note">W</p>
+                </div>
+                <div class="key white" id="s">
+                    <p class="note">S</p>
+                </div>
+                <div class="key black" id="e">
+                    <p class="note">E</p>
+                </div>
+                <div class="key white" id="d">
+                    <p class="note">D</p>
+                </div>
+                <div class="key white" id="f">
+                    <p class="note">F</p>
+                </div>
+                <div class="key black" id="t">
+                    <p class="note">T</p>
+                </div>
+                <div class="key white" id="g">
+                    <p class="note">G</p>
+                </div>
+                <div class="key black" id="y">
+                    <p class="note">Y</p>
+                </div>
+                <div class="key white" id="h">
+                    <p class="note">H</p>
+                </div>
+                <div class="key black" id="u">
+                    <p class="note">U</p>
+                </div>
+                <div class="key white" id="j">
+                    <p class="note">J</p>
+                </div>
+                <div class="key white" id="k">
+                    <p class="note">K</p>
+                </div>
+                <div class="key black" id="o">
+                    <p class="note">O</p>
+                </div>
+                <div class="key white" id="l">
+                    <p class="note">L</p>
+                </div>
+                <div class="key black" id="p">
+                    <p class="note">P</p>
+                </div>
+                <div class="key white" id=";">
+                    <p class="note">;</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+{% endblock %}

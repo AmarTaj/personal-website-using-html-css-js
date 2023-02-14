@@ -1,0 +1,77 @@
+/* chat box where messages appear */
+#chat2 {
+    width: 60%;
+    justify-content: center;
+    height: 40vh;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    overflow-y:auto
+  }
+ 
+  /* page title */
+#c-title{
+    text-align: center;
+    font-size: 2vw;
+}
+
+/* horizontal line to clean up page */
+hr{
+    width: 60%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* input box that grabs messages to send to chat */
+.chat-box-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+/* the person's email */
+.email{
+    width: 60%;
+}
+/* the id for message input */
+#msgInput{
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-color: rgb(0, 128, 255);
+    color: rgb(0, 128, 255);
+    align-content: center;
+    height: 5vw;
+}
+
+/* div representing the leave chat button */
+#leaveChatB{
+    color: white;
+    background-color: rgb(0, 128, 255);
+    width: 100%;
+    margin-bottom: 3%;
+    height: 8vh;
+    font-size: 2vw;
+    line-height: 8vh;
+    border-color: rgb(0, 128, 255);
+    padding-left: .5%;
+    text-align: center;
+}
+
+#leaveChatB:hover{
+    background-color: black;
+    color: #0493bd;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    width: 60%;
+}
+

@@ -1,0 +1,36 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+<link rel="stylesheet" href="../static/main/css/chat.css">
+{% endblock %}
+
+
+{% block extrajs %}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+<script src="https://cdn.socket.io/3.1.1/socket.io.min.js"></script>
+<script src="{{ url_for('static', filename='main/js/chat.js') }}" defer></script>
+{% endblock %}
+
+
+{% block maincontent %}
+<p id = "c-title">Chat</p>
+
+<hr>
+<!-- The div to organize page into column -->
+<div class = "chat-box-input">
+    <!-- The div where the chats show up and messages are appended to-->
+    <div id='chat2' contenteditable>    
+    </div>
+
+    <p class="email">
+        <!-- takes in message input -->
+    <input id = "msgInput" placeholder="Enter Message " />
+    </p>
+    <!-- leave chat button -->
+    <a href="/home">
+        <div id="leaveChatB">
+            Leave
+        </div>
+    </a>
+</div>
+{% endblock %}

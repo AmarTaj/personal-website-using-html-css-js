@@ -1,0 +1,80 @@
+/* Main styling */
+.page-title{
+    text-align: center;
+}
+/* Grid usage for ease of styling */
+.main-txt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6fr 1fr;
+    max-width: 80vw;
+    max-height: 50vh;
+    margin: auto;
+    align-items: center;
+}
+
+/* Profile picture */
+.pfpwrap{
+    display: block;
+    margin: auto;
+    scale: 0.9;
+    border: 3px solid black;
+}
+#pfp {
+    overflow: hidden;
+    float: left;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    max-width: 80vw;
+    max-height: 50vh;
+}
+
+/* Piano */
+.pianowrap{
+    display: block;
+    margin: auto;
+    scale: 0.9;
+    border: 3px solid black;
+    /* justify-content: center; */
+}
+#piano {
+    overflow: hidden;
+    float: left;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    max-width: 80vw;
+    max-height: 50vh;
+}
+
+/* Text description */
+.desc{
+    max-height: 50vh;
+    overflow: auto;
+    margin: 5px;
+}
+
+/* Fun fact */
+.fun-fact{
+    align-self: center;
+    text-align: center;
+    grid-column: 1/span 2;
+}
+
+/* Display change in the event of screen size smaller than 650px */
+@media screen and (max-width:650px) {
+    .main-txt{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin: auto;
+        align-items:inherit;
+    }
+    .desc{
+        overflow: inherit;
+    }
+    .fun-fact{
+        grid-column: auto;
+        margin-top: 10px;
+    }
+}

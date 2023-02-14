@@ -1,0 +1,117 @@
+/* heading styling */
+h1,h2{
+    margin: 0;
+    padding: 0;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* formatting for feedback input */
+#EditInst, #addres {
+    color: #3c3c3c;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 0;
+    line-height: 22px;
+    background-color: #fbfbfb;
+    padding: 13px 13px 13px 54px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid #CCCCCC;
+  }
+
+#EditInst:hover, #addres:hover {
+    background-color: black;
+    color: #0493bd;
+  }
+
+/* resume wrapper div */
+.resume-wrapper{
+    width: 85%;
+    margin:auto;
+}
+/* institution wrapper */
+.inst-wrapper{
+    display: grid;
+    grid-template-columns: 7fr 1fr 1fr;
+    height: 50px;
+    line-height: 50px;
+}
+
+.edit1{
+    height: 50px;
+    line-height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.EditInst{
+    height:min-content;
+    width:max-content;
+    align-self: center;
+}
+
+/* position title and date styling */
+.title-date{
+    display: grid;
+    grid-template-columns: 7fr 1fr 1fr;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* institution title */
+.inst-title{
+    vertical-align: middle !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* position title */
+.p-title{
+    margin: 0;
+    padding: 0;
+}
+
+/* dates */
+.pos-dates{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 50px;
+    line-height: 50px;
+    justify-content: right;
+}
+
+/* general text styling */
+#start-date, #end-date, .inline-p, #city, #state{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    max-width: fit-content !important;
+    text-align: center;
+}
+
+/* responsibilities */
+#resp{
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* experience list */
+.exp-list{
+    list-style-type: disc;
+}
+
+/* skills list */
+.skills-list{
+    display: inline !important;
+}
+
+/* skill */
+#skill{
+    display: inline;
+}

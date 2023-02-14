@@ -1,0 +1,18 @@
+/* header styling */
+body{
+    margin: 0px;
+    padding: 0px;
+    background: burlywood no-repeat;
+    background-size: cover;
+}
+.header-img{
+    background-image: url("../images/jojo.jpg");
+    width: 100vw;
+    height: 20vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+    

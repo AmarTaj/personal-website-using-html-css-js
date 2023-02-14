@@ -1,0 +1,20 @@
+{% extends 'shared/layout.html' %}
+{% block extracss %}
+<link rel="stylesheet" href="../static/main/css/feedbackscreen.css">
+{% endblock %}
+
+{% block maincontent %}
+
+<!-- Main text of feedback page -->
+<h1 class="feedback-title">Thanks for your feedback - here's what others had to say:</h1>
+
+<!-- feedback body -->
+<div class = "feedback-body">
+<ul class="feed-text">
+    {% for feed in data %}
+
+    <li>{{ feed['name'] }} said: {{feed['Comment']}}</li>
+    {% endfor %}
+</ul>
+</div>
+{% endblock %}

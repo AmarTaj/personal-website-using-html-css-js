@@ -1,0 +1,49 @@
+#title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.submit-button{
+    background-color: rgb(58, 150, 224);
+    text-align: center;
+    text-justify: center;
+    color: white;
+}
+
+.login-form{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 30vh;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 0%;
+    
+}
+
+#l-child{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 80%;
+    height: 5vw;
+}
+
+.submit-button:hover{
+    background-color: black;
+    color: #0493bd;
+}
+
+hr{
+    width: 80%;
+}
+
+.fail{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 0;
+    text-align: center;
+    color: rgb(239, 12, 12);
+    padding-bottom: 20%;
+}

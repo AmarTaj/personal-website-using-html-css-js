@@ -1,0 +1,9 @@
+/* Footer styling */
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: vw;
+    height: 5vh;
+}

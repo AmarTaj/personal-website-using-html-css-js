@@ -1,0 +1,28 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<div>
+  <div class="main-txt">
+    <div class="pfpwrap"><img src="../static/main/images/amar.PNG" alt="AmarPFP" id="pfp"></div>
+    <div class="desc"><strong>Amar Taj</strong> is an Honors student at Michigan State University studying
+        Computer Engineering, bound to graduate in
+        December 2022. During his undergraduate career at Michigan State University,
+        he has worked as a Data Analyst at IHS Markit (Now part of S&P Global) where he was a part of their
+        development team, where the workload comprised of back-end programming
+        work based on OEM and dealer client specifications. During his professional experience, he worked on Big
+        Data, Machine Learning, Advanced Statistical Analytics, Visualization and Application Development.
+
+        In addition to his internships, he has been working as an engineering tutor for TRIO Student Support
+        Services at Michigan State University, which is an organization focused to support first-generation
+        low-income college students through their college career. He tutors various subjects such as Algorithms &
+        Data Structures, C++, Python, Java, Calculus, Trigonometry, Physics, and Chemistry to ensure students'
+        academic success.
+    </div>
+    <div class="fun-fact">
+        <hr>
+        <p>A fun fact about me: <b>{{fun_fact}}</b> </p>
+    </div>
+</div>
+{% endblock %}
+
+

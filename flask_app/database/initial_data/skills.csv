@@ -1,0 +1,8 @@
+"skill_id","experience_id","name","skill_level"
+"1","1","Python","Proficient"
+"2","1","SQL","Proficient"
+"3","2","Python","Proficient"
+"4","2","SQL","Proficient"
+"5","2","Python","Proficient"
+"6","2","C++","Proficient"
+"7","2","Java","Intermediate"
